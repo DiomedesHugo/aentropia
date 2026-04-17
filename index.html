@@ -13,13 +13,14 @@
 </head>
 <body class="text-gray-800 bg-white antialiased font-sans relative">
 
-    <nav id="dynamic-nav" class="fixed top-0 left-0 w-full z-50 transform -translate-y-full transition-transform duration-500 ease-in-out bg-gray-900 text-white shadow-xl border-b border-gray-700">
-        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#hero" class="text-xl font-black uppercase tracking-widest hover:text-gray-400 transition-colors">
+   <nav id="dynamic-nav" class="fixed top-0 left-0 w-full z-50 transform -translate-y-full transition-transform duration-500 ease-in-out bg-gray-900 text-white shadow-xl border-b border-gray-700">
+        <div class="max-w-5xl mx-auto px-4 py-3 flex flex-col md:flex-row justify-between items-center gap-2 md:gap-0">
+            
+            <a href="#hero" class="text-lg md:text-xl font-black uppercase tracking-widest hover:text-gray-400 transition-colors">
                 Aentropía
             </a>
             
-            <ul class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest text-gray-400">
+            <ul class="flex flex-wrap justify-center gap-x-4 gap-y-2 text-[10px] sm:text-xs font-bold uppercase tracking-widest text-gray-400">
                 <li><a href="#principio" class="hover:text-white transition-colors duration-300">El Principio</a></li>
                 <li><a href="#modelo-core" class="hover:text-white transition-colors duration-300">El Modelo</a></li>
                 <li><a href="#contenedor-lvp" class="hover:text-white transition-colors duration-300">El Contenedor</a></li>
@@ -107,29 +108,25 @@
         <p class="text-sm text-gray-500 font-mono">Arquitecto del Sistema: Diomedes Hugo Vizcardo</p>
     </footer>
 
-    <script>
+   <script>
         document.addEventListener("DOMContentLoaded", () => {
             const nav = document.getElementById('dynamic-nav');
-            const hero = document.getElementById('hero');
 
-            // Función analítica para detectar la posición de la pantalla
+            // Función analítica para detectar el scroll de forma más sensible
             const checkScroll = () => {
-                const heroBottom = hero.getBoundingClientRect().bottom;
-                
-                // Si el borde inferior del Hero cruza el umbral superior de la pantalla...
-                if (heroBottom <= 80) {
+                // El menú aparece en cuanto el usuario baja 150 píxeles
+                if (window.scrollY > 150) {
                     nav.classList.remove('-translate-y-full'); // Quitar invisibilidad
                     nav.classList.add('translate-y-0');        // Mostrar
                 } else {
                     nav.classList.remove('translate-y-0');
-                    nav.classList.add('-translate-y-full');
+                    nav.classList.add('-translate-y-full');    // Ocultar
                 }
             };
 
-            // Activar el sensor al hacer scroll
+            // Escuchar el evento de scroll en tiempo real
             window.addEventListener('scroll', checkScroll);
         });
     </script>
-
 </body>
 </html>
