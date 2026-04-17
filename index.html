@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +11,22 @@
         .placeholder-box { background-color: #f3f4f6; border: 1px solid #d1d5db; min-height: 200px; display: flex; align-items: center; justify-content: center; color: #6b7280; }
     </style>
 </head>
-<body class="text-gray-800 bg-white antialiased font-sans">
+<body class="text-gray-800 bg-white antialiased font-sans relative">
+
+    <nav id="dynamic-nav" class="fixed top-0 left-0 w-full z-50 transform -translate-y-full transition-transform duration-500 ease-in-out bg-gray-900 text-white shadow-xl border-b border-gray-700">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#hero" class="text-xl font-black uppercase tracking-widest hover:text-gray-400 transition-colors">
+                Aentropía
+            </a>
+            
+            <ul class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest text-gray-400">
+                <li><a href="#principio" class="hover:text-white transition-colors duration-300">El Principio</a></li>
+                <li><a href="#modelo-core" class="hover:text-white transition-colors duration-300">El Modelo</a></li>
+                <li><a href="#contenedor-lvp" class="hover:text-white transition-colors duration-300">El Contenedor</a></li>
+                <li><a href="#libro" class="hover:text-[#D4AF37] transition-colors duration-300">El Tratado</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <main class="max-w-5xl mx-auto px-6">
 
@@ -37,19 +52,19 @@
         <section id="modelo-core" class="py-16">
             <h2 class="text-3xl font-bold mb-6 text-center">2. El Modelo (Core)</h2>
             <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="p-6 bg-gray-50 border">
+                <div class="p-6 bg-gray-50 border hover:bg-gray-100 transition-colors">
                     <h3 class="font-bold mb-2">Energía Interna (U)</h3>
                     <p class="text-sm">[ Orden interno, cohesión, integridad ]</p>
                 </div>
-                <div class="p-6 bg-gray-50 border">
+                <div class="p-6 bg-gray-50 border hover:bg-gray-100 transition-colors">
                     <h3 class="font-bold mb-2">Trabajo Útil (W)</h3>
                     <p class="text-sm">[ Orden externo, capacidad efectiva ]</p>
                 </div>
-                <div class="p-6 bg-gray-50 border">
+                <div class="p-6 bg-gray-50 border hover:bg-gray-100 transition-colors">
                     <h3 class="font-bold mb-2">Energía Intercambiada (Q)</h3>
                     <p class="text-sm">[ Recursos, información, presión externa ]</p>
                 </div>
-                <div class="p-6 bg-gray-50 border">
+                <div class="p-6 bg-gray-50 border hover:bg-gray-100 transition-colors">
                     <h3 class="font-bold mb-2">Entropía (S)</h3>
                     <p class="text-sm">[ Energía disipada, desorden acumulado ]</p>
                 </div>
@@ -73,65 +88,48 @@
                 </div>
             </div>
         </section>
- <!-- 
-        <section id="diagnostico" class="py-16">
-            <h2 class="text-3xl font-bold mb-6 text-center">4. Instrumento de Diagnóstico</h2>
-            <div class="max-w-4xl mx-auto overflow-x-auto">
-                <table class="w-full text-left border-collapse border border-gray-300">
-                    <thead>
-                        <tr class="bg-gray-100">
-                            <th class="border border-gray-300 p-3">Ley Aentrópica</th>
-                            <th class="border border-gray-300 p-3">Qué evalúa</th>
-                            <th class="border border-gray-300 p-3">Señal de estabilidad</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="border border-gray-300 p-3">[ Precio Continuo del Orden ]</td>
-                            <td class="border border-gray-300 p-3">[ Capacidad de mantenimiento ]</td>
-                            <td class="border border-gray-300 p-3">[ Corrección temprana ]</td>
-                        </tr>
-                        </tbody>
-                </table>
-            </div>
-        </section>
 
-        <section id="laboratorio" class="py-16 text-center bg-gray-50">
-            <h2 class="text-3xl font-bold mb-6">5. El Laboratorio (Análisis Geopolítico)</h2>
-            <p class="mb-6 max-w-2xl mx-auto">[ Explicación de geopolítica e historia desde el enfoque aentrópico. ]</p>
-            <div class="placeholder-box w-full max-w-2xl mx-auto h-64">
-                [ Espacio para incrustar el Reproductor de YouTube ]
-            </div>
-        </section>
--->
-        <section id="libro" class="py-16 text-center">
+        <section id="libro" class="py-24 text-center">
             <h2 class="text-3xl font-bold mb-6">4. El Tratado (Manual Teórico)</h2>
             <p class="mb-8 max-w-2xl mx-auto">[ La ciencia y filosofía completa detrás de la doctrina. ]</p>
-            <button class="bg-black text-white px-8 py-3 rounded uppercase tracking-wide font-bold">
+            <button class="bg-black text-white px-8 py-3 rounded uppercase tracking-wide font-bold hover:bg-gray-800 transition-colors shadow-lg">
                 [ Botón: Adquirir en Amazon ]
             </button>
         </section>
-        <!-- 
-        <section id="implicaciones" class="py-16">
-            <h2 class="text-3xl font-bold mb-6 text-center">7. Implicaciones</h2>
-            <div class="max-w-3xl mx-auto">
-                <ul class="list-disc pl-6 space-y-4">
-                    <li>[ La sociedad como problema termodinámico. ]</li>
-                    <li>[ Medición como fuente de legitimidad. ]</li>
-                    <li>[ Corrección continua como forma de estabilidad. ]</li>
-                </ul>
-            </div>
-        </section>
-        -->
-    </main>
+
+        </main>
 
     <footer id="cierre" class="py-12 bg-gray-900 text-white text-center">
         <h2 class="text-2xl font-bold mb-4">[ ÚLTIMA LÍNEA ]</h2>
-        <p class="max-w-2xl mx-auto italic mb-6">
+        <p class="max-w-2xl mx-auto italic mb-6 text-gray-300">
             "El Principio Aentrópico no promete salvación ni permanencia indefinida. Promete retrasar el colapso evitable."
         </p>
-        <p class="text-sm text-gray-400">Arquitecto del Sistema: Diomedes Hugo Vizcardo</p>
+        <p class="text-sm text-gray-500 font-mono">Arquitecto del Sistema: Diomedes Hugo Vizcardo</p>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const nav = document.getElementById('dynamic-nav');
+            const hero = document.getElementById('hero');
+
+            // Función analítica para detectar la posición de la pantalla
+            const checkScroll = () => {
+                const heroBottom = hero.getBoundingClientRect().bottom;
+                
+                // Si el borde inferior del Hero cruza el umbral superior de la pantalla...
+                if (heroBottom <= 80) {
+                    nav.classList.remove('-translate-y-full'); // Quitar invisibilidad
+                    nav.classList.add('translate-y-0');        // Mostrar
+                } else {
+                    nav.classList.remove('translate-y-0');
+                    nav.classList.add('-translate-y-full');
+                }
+            };
+
+            // Activar el sensor al hacer scroll
+            window.addEventListener('scroll', checkScroll);
+        });
+    </script>
 
 </body>
 </html>
