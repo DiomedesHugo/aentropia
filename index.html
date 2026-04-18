@@ -9,15 +9,43 @@
         /* Estilos temporales de wireframe para ver claramente las secciones */
         section { border-bottom: 2px dashed #ccc; }
         .placeholder-box { background-color: #f3f4f6; border: 1px solid #d1d5db; min-height: 200px; display: flex; align-items: center; justify-content: center; color: #6b7280; }
+        
+        /* Motor de Destello Aentrópico */
+        .logo-scanner {
+            position: relative;
+            overflow: hidden; /* Evita que la luz se salga del contorno */
+        }
+        .logo-scanner::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -150%;
+            width: 50%;
+            height: 100%;
+            /* El láser: transparente -> blanco semitransparente -> transparente */
+            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.6), transparent);
+            transform: skewX(-25deg);
+        }
+        .logo-scanner.fire-laser::after {
+            animation: sweep 1s ease-in-out;
+        }
+        @keyframes sweep {
+            0% { left: -150%; }
+            100% { left: 200%; }
+        }
     </style>
 </head>
 <body class="text-gray-800 bg-white antialiased font-sans relative">
 
-   <nav id="dynamic-nav" class="fixed top-0 left-0 w-full z-50 transform -translate-y-full transition-transform duration-500 ease-in-out bg-gray-900 text-white shadow-xl border-b border-gray-700">
+    <nav id="dynamic-nav" class="fixed top-0 left-0 w-full z-50 transform -translate-y-full transition-transform duration-500 ease-in-out bg-gray-900 text-white shadow-xl border-b border-gray-700">
         <div class="max-w-5xl mx-auto px-4 py-3 flex flex-col md:flex-row justify-between items-center gap-2 md:gap-0">
             
-            <a href="#hero" class="text-lg md:text-xl font-black uppercase tracking-widest hover:text-gray-400 transition-colors">
-                Aentropía
+            <!-- EL LOGO INTEGRADO EN LA MATRIZ -->
+            <a id="logo-ancla" href="#hero" class="flex items-center gap-3 group logo-scanner">
+                <img src="logo-aentropia.png" alt="Símbolo Aentrópico" class="h-8 w-auto opacity-80 transition-opacity duration-300">
+                <span class="text-lg md:text-xl font-black uppercase tracking-widest text-white hidden sm:block">
+                    Aentropía
+                </span>
             </a>
             
             <ul class="flex flex-wrap justify-center gap-x-4 gap-y-2 text-[10px] sm:text-xs font-bold uppercase tracking-widest text-gray-400">
@@ -98,7 +126,7 @@
             </button>
         </section>
 
-        </main>
+    </main>
 
     <footer id="cierre" class="py-12 bg-gray-900 text-white text-center">
         <h2 class="text-2xl font-bold mb-4">[ ÚLTIMA LÍNEA ]</h2>
@@ -108,24 +136,44 @@
         <p class="text-sm text-gray-500 font-mono">Arquitecto del Sistema: Diomedes Hugo Vizcardo</p>
     </footer>
 
-   <script>
+    <!-- MOTOR LÓGICO PURIFICADO -->
+    <script>
         document.addEventListener("DOMContentLoaded", () => {
             const nav = document.getElementById('dynamic-nav');
+            const logoTrigger = document.getElementById('logo-ancla');
 
-            // Función analítica para detectar el scroll de forma más sensible
+            // 1. Motor de Despliegue del Menú (Aparición a los 150px)
             const checkScroll = () => {
-                // El menú aparece en cuanto el usuario baja 150 píxeles
                 if (window.scrollY > 150) {
-                    nav.classList.remove('-translate-y-full'); // Quitar invisibilidad
-                    nav.classList.add('translate-y-0');        // Mostrar
+                    nav.classList.remove('-translate-y-full'); 
+                    nav.classList.add('translate-y-0');        
                 } else {
                     nav.classList.remove('translate-y-0');
-                    nav.classList.add('-translate-y-full');    // Ocultar
+                    nav.classList.add('-translate-y-full');    
                 }
             };
-
-            // Escuchar el evento de scroll en tiempo real
             window.addEventListener('scroll', checkScroll);
+
+            // 2. Radar de Fronteras para disparar el destello metálico
+            const sections = document.querySelectorAll('section');
+            
+            const sectionObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    // Si el usuario acaba de entrar a una nueva sección (50% visible)
+                    if (entry.isIntersecting && window.scrollY > 150) {
+                        // Disparar el láser
+                        logoTrigger.classList.add('fire-laser');
+                        
+                        // Recargar el láser después de 1 segundo
+                        setTimeout(() => {
+                            logoTrigger.classList.remove('fire-laser');
+                        }, 1000);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            // Conectar el radar a todas las secciones
+            sections.forEach(sec => sectionObserver.observe(sec));
         });
     </script>
 </body>
