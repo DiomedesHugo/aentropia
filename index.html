@@ -202,8 +202,8 @@
 <section id="modelo-core" class="py-24 bg-black border-b border-gray-900">
     <!-- Cabezal Alineado al Estilo del Principio -->
     <div class="mb-16 text-center">
-        <h2 class="text-4xl md:text-5xl font-black text-white tracking-tight">
-            <span class="text-blue-600 mr-2">02.</span>El Modelo
+        <h2 class="text-2xl md:text-3xl font-black text-white tracking-tight">
+            <span class="text-white mr-2">02.</span>El Modelo
         </h2>
         <p class="text-gray-400 font-mono text-sm tracking-widest uppercase mt-4">Matriz de Variables Fundamentales</p>
     </div>
@@ -267,25 +267,60 @@
         </button>
     </div>
 </section>
-     
+     <section id="contenedor-social" class="py-24 bg-black border-b border-gray-900">
+    
+    <!-- Cabezal -->
+    <div class="mb-16 text-center">
+        <h2 class="text-2xl md:text-3xl font-black text-white tracking-tight">
+            <span class="text-white mr-2">03.</span>El Contenedor Social
+        </h2>
+        <p class="text-gray-400 font-mono text-sm tracking-widest uppercase mt-4">Propiedades Termodinámicas</p>
+    </div>
 
-        <section id="contenedor-lvp" class="py-16">
-            <h2 class="text-3xl font-bold mb-6 text-center">3. El Contenedor Social</h2>
-            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-                <div class="p-4">
-                    <h3 class="font-bold text-xl">Volumen (V)</h3>
-                    <p class="text-sm mt-2">[ Espacio de acción disponible ]</p>
-                </div>
-                <div class="p-4">
-                    <h3 class="font-bold text-xl">Libertad (L)</h3>
-                    <p class="text-sm mt-2">[ Movilidad real dentro del espacio ]</p>
-                </div>
-                <div class="p-4">
-                    <h3 class="font-bold text-xl">Presión (P)</h3>
-                    <p class="text-sm mt-2">[ Restricciones y normas ]</p>
-                </div>
+    <!-- La Cuadrícula de Contención (Modificada a grid-cols-3) -->
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
+        
+        <!-- Variable: V (Volumen) - Color: Cian -->
+        <button class="group relative p-8 bg-gray-900/50 border border-gray-800 rounded-lg hover:border-cyan-500 hover:bg-gray-900 transition-all text-left focus:outline-none">
+            <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-11/12 bg-cyan-950 border border-cyan-800 text-gray-200 text-sm p-4 rounded-lg shadow-2xl opacity-0 group-hover:opacity-100 group-active:opacity-100 group-focus:opacity-100 transition-opacity duration-200 pointer-events-none z-10 text-center leading-relaxed">
+                Es el espacio de maniobra disponible dentro de un sistema, definido por la cantidad de estados accesibles y trayectorias posibles para la acción.
+                <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 border-4 border-transparent border-t-cyan-800"></div>
             </div>
-        </section>
+            <div class="flex items-center justify-between mb-2">
+                <h3 class="text-2xl font-bold text-gray-200 group-hover:text-white transition-colors">Volumen Social</h3>
+                <span class="text-3xl font-black text-cyan-500 font-mono">V</span>
+            </div>
+            <p class="text-sm font-mono text-gray-500 uppercase tracking-tighter">Espacio Disponible</p>
+        </button>
+
+        <!-- Variable: L (Libertad) - Color: Blanco/Plata -->
+        <button class="group relative p-8 bg-gray-900/50 border border-gray-800 rounded-lg hover:border-gray-300 hover:bg-gray-900 transition-all text-left focus:outline-none">
+            <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-11/12 bg-gray-800 border border-gray-600 text-gray-200 text-sm p-4 rounded-lg shadow-2xl opacity-0 group-hover:opacity-100 group-active:opacity-100 group-focus:opacity-100 transition-opacity duration-200 pointer-events-none z-10 text-center leading-relaxed">
+               Es la magnitud que mide el nivel medio de actividad de los Nodos en un sistema, es decir, su capacidad efectiva de actuar, reaccionar y desplazarse dentro del espacio social.
+                <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-600"></div>
+            </div>
+            <div class="flex items-center justify-between mb-2">
+                <h3 class="text-2xl font-bold text-gray-200 group-hover:text-white transition-colors">Libertad</h3>
+                <span class="text-3xl font-black text-white font-mono">L</span>
+            </div>
+            <p class="text-sm font-mono text-gray-500 uppercase tracking-tighter">capacidad de acción</p>
+        </button>
+
+        <!-- Variable: P (Presión) - Color: Naranja (Riesgo Térmico) -->
+        <button class="group relative p-8 bg-gray-900/50 border border-gray-800 rounded-lg hover:border-orange-500 hover:bg-gray-900 transition-all text-left focus:outline-none">
+            <div class="absolute -top-28 left-1/2 -translate-x-1/2 w-11/12 bg-orange-950 border border-orange-800 text-gray-200 text-sm p-4 rounded-lg shadow-2xl opacity-0 group-hover:opacity-100 group-active:opacity-100 group-focus:opacity-100 transition-opacity duration-200 pointer-events-none z-10 text-center leading-relaxed">
+                Es el estado del sistema que emerge cuando múltiples fuerzas sociales interactúan dentro de un volumen limitado y son contenidas por sus superficies estructurales. Cambios en las normas modifican las superficies estructurales, alterando la forma en que la presión se distribuye o se intensifica dentro del sistema.
+                <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 border-4 border-transparent border-t-orange-800"></div>
+            </div>
+            <div class="flex items-center justify-between mb-2">
+                <h3 class="text-2xl font-bold text-gray-200 group-hover:text-white transition-colors">Presión</h3>
+                <span class="text-3xl font-black text-orange-500 font-mono">P</span>
+            </div>
+            <p class="text-sm font-mono text-gray-500 uppercase tracking-tighter">Grado de Confinamiento</p>
+        </button>
+
+    </div>
+</section>
 
         <section id="libro" class="py-24 text-center">
             <h2 class="text-3xl font-bold mb-6">4. El Tratado (Manual Teórico)</h2>
