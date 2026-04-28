@@ -331,61 +331,61 @@
     </div>
 
     <!-- Matriz de Documentos (Grid de 2 columnas) -->
-    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-6">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-6 pb-24">
         
-        <!-- ACTIVO 1: EL LIBRO (Desbloqueado y Operativo con Portada) -->
-        
-    <div class="mb-auto z-10">
-        <div class="flex flex-col md:flex-row gap-5 mb-6 items-center md:items-start text-center md:text-left">
+        <div class="flex flex-col h-full p-6 md:p-8 bg-gray-900/80 border border-gray-700 rounded-xl hover:border-blue-500 transition-colors shadow-2xl relative overflow-hidden">
+            <div class="absolute top-0 right-0 -mr-8 -mt-8 w-32 h-32 rounded-full bg-blue-600/10 blur-3xl pointer-events-none"></div>
             
-            <div class="w-32 sm:w-40 md:w-28 flex-shrink-0 mb-4 md:mb-0">
-                <img src="PortadaDigital.jpg" alt="Portada El Principio Aentrópico" class="w-full h-auto rounded shadow-[0_0_15px_rgba(37,99,235,0.2)] border border-gray-700 hover:scale-105 transition-transform duration-300">
-            </div>
-            
-            <div class="flex flex-col items-center md:items-start">
-                <span class="inline-block px-3 py-1 bg-blue-900/50 text-blue-400 font-mono text-[10px] md:text-xs uppercase tracking-widest rounded mb-3 border border-blue-800/50">
-                    El Milagro de lo Improbable
-                </span>
-                <h3 class="text-2xl md:text-3xl font-bold text-white leading-tight">
-                    El Principio Aentrópico
-                </h3>
-                <p class="text-xs md:text-sm text-gray-500 font-mono mt-2 uppercase tracking-wide">
-                    Tratado de Ingeniería Civilizatoria
+            <div class="flex-grow z-10">
+                <div class="flex flex-col xl:flex-row gap-5 mb-6 items-center xl:items-start text-center xl:text-left">
+                    
+                    <div class="w-32 sm:w-40 xl:w-32 flex-shrink-0 mb-4 xl:mb-0">
+                        <img src="PortadaDigital.jpg" alt="Portada El Principio Aentrópico" class="w-full h-auto rounded shadow-[0_0_15px_rgba(37,99,235,0.2)] border border-gray-700 hover:scale-105 transition-transform duration-300">
+                    </div>
+                    
+                    <div class="flex flex-col items-center xl:items-start">
+                        <span class="inline-block px-3 py-1 bg-blue-900/50 text-blue-400 font-mono text-[10px] uppercase tracking-widest rounded mb-3 border border-blue-800/50">
+                            El Milagro de lo Improbable
+                        </span>
+                        <h3 class="text-2xl font-bold text-white leading-tight">
+                            El Principio Aentrópico
+                        </h3>
+                        <p class="text-xs text-gray-400 font-mono mt-2 uppercase tracking-wide">
+                            Tratado de Ingeniería Civilizatoria
+                        </p>
+                    </div>
+                </div>
+
+                <p class="text-gray-400 leading-relaxed mb-8 text-sm md:text-base text-center xl:text-left">
+                    Este tratado explora el propósito de la humanidad desde una perspectiva física y propone un modelo para entender la sociedad como un sistema de gestión de energía, donde su supervivencia depende de cómo transforma y sostiene su estructura.
                 </p>
             </div>
+            
+            <a href="https://www.amazon.com/dp/B0GW4D1J2V" target="_blank" rel="noopener noreferrer" class="z-10 group relative w-full flex items-center justify-center px-4 md:px-8 py-4 bg-gray-100 text-black font-black text-sm md:text-base uppercase tracking-widest hover:bg-white transition-all rounded-lg overflow-hidden mt-auto">
+                <span class="relative">Adquirir el Tratado</span>
+                <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+            </a>
         </div>
 
-        <p class="text-gray-400 leading-relaxed mb-8 text-sm md:text-base text-center md:text-left">
-            Este tratado explora el propósito de la humanidad desde una perspectiva física y propone un modelo para entender la sociedad como un sistema de gestión de energía, donde su supervivencia depende de cómo transforma y sostiene su estructura.
-        </p>
-    </div>
-    
-    <a href="https://www.amazon.com/dp/B0GW4D1J2V" target="_blank" rel="noopener noreferrer" class="z-10 group relative w-full flex items-center justify-center px-4 md:px-8 py-4 bg-gray-100 text-black font-black text-sm md:text-base uppercase tracking-widest hover:bg-white transition-all rounded-lg overflow-hidden">
-        <span class="relative">Adquirir el Tratado</span>
-        <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-    </a>
-</div>
-
-        <!-- ACTIVO 2: EL PAPER (Bloqueado / En Progreso) -->
         <div class="flex flex-col h-full p-8 bg-black border-2 border-dashed border-gray-800 rounded-xl relative overflow-hidden opacity-70 cursor-not-allowed">
-            <div class="mb-auto z-10">
+            <div class="flex-grow z-10 text-center md:text-left">
                 <span class="inline-block px-3 py-1 bg-gray-900 text-gray-500 font-mono text-xs uppercase tracking-widest rounded mb-6 border border-gray-800">Archivo Restringido</span>
-                <h3 class="text-3xl font-bold text-gray-600 mb-4">Validación Académica</h3>
-                <p class="text-gray-600 leading-relaxed mb-8">
+                <h3 class="text-2xl font-bold text-gray-600 mb-4">Validación Académica</h3>
+                <p class="text-gray-600 leading-relaxed mb-8 text-sm md:text-base">
                     Modelado matemático avanzado y evidencia empírica. El paper técnico destinado a someter la Doctrina Aentrópica al rigor de la revisión por pares.
                 </p>
             </div>
             
-            <!-- Indicador de Estado -->
-            <div class="z-10 w-full flex items-center justify-center px-8 py-4 bg-gray-900/50 border border-gray-800 text-gray-500 font-mono text-sm uppercase tracking-widest rounded-lg">
+            <div class="z-10 w-full flex items-center justify-center px-8 py-4 bg-gray-900/50 border border-gray-800 text-gray-500 font-mono text-sm uppercase tracking-widest rounded-lg mt-auto">
                 <span class="flex items-center">
                     <span class="w-2 h-2 rounded-full bg-yellow-600 animate-pulse mr-3"></span>
-                    En fase de compilación
+                    En compilación
                 </span>
             </div>
         </div>
 
     </div>
+
 </section>
        
 
